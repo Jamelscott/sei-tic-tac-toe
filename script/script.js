@@ -118,9 +118,8 @@ let positionOne = document.getElementById("pos1").addEventListener("click", func
             i++
             pp1++
         }
-        tieGame();
     }
-
+    
     if (p1 === 1 && p2 === 1 & p3 === 1 || p1 === 1 && p4 === 1 && p7 === 1 || p1 === 1 && p5 === 1 & p9 === 1){
         document.getElementById("whosTurn").innerText = "Soma Wins!"
         let btn = document.createElement("button")
@@ -133,21 +132,22 @@ let positionOne = document.getElementById("pos1").addEventListener("click", func
         winner = "Soma"
         checkForSpinner();
         stopTheGame();
-
-        }else if (pp1 === 1 && pp2 === 1 & pp3 === 1 || pp1 === 1 && pp4 === 1 && pp7 === 1 || pp1 === 1 && pp5 === 1 & pp9 === 1){
-            document.getElementById("whosTurn").innerText = "Henri Wins!"
-            let btn = document.createElement("button")
-            btn.innerText = "PLAY AGAIN"
-            container.appendChild(btn)
-            btn.addEventListener("click", function(){
-                console.log("hello")
-                location.reload(true)
-            })    
-            winner = "Henri"
-            checkForSpinner();
-            stopTheGame();
-            
+        
+    }else if (pp1 === 1 && pp2 === 1 & pp3 === 1 || pp1 === 1 && pp4 === 1 && pp7 === 1 || pp1 === 1 && pp5 === 1 & pp9 === 1){
+        document.getElementById("whosTurn").innerText = "Henri Wins!"
+        let btn = document.createElement("button")
+        btn.innerText = "PLAY AGAIN"
+        container.appendChild(btn)
+        btn.addEventListener("click", function(){
+            console.log("hello")
+            location.reload(true)
+        })    
+        winner = "Henri"
+        checkForSpinner();
+        stopTheGame();
+        
     }
+    tieGame();
 })
 
 
@@ -567,6 +567,7 @@ let stopTheGame = ()=>{
         newText.style.color= winColor
         newText.innerText = winner + " wins!"
         document.getElementById("text-container").appendChild(newText)
+        document.getElementById("container").scrollIntoView(false);
 
     }
     if (p2 === 0 && pp2 === 0){
@@ -581,6 +582,7 @@ let stopTheGame = ()=>{
         newText.style.color = winColor
         newText.innerText = winner + " wins!"
         document.getElementById("text-container").appendChild(newText)
+        document.getElementById("container").scrollIntoView(false);
     }
     if (p3 === 0 && pp3 === 0){
 
@@ -594,6 +596,7 @@ let stopTheGame = ()=>{
         newText.style.color = winColor
         newText.innerText = winner + " wins!"
         document.getElementById("text-container").appendChild(newText)
+        document.getElementById("container").scrollIntoView(false);
     }
     if (p4 === 0 && pp4 === 0){
 
@@ -607,6 +610,7 @@ let stopTheGame = ()=>{
         newText.style.color = winColor
         newText.innerText = winner + " wins!"
         document.getElementById("text-container").appendChild(newText)
+        document.getElementById("container").scrollIntoView(false);
     }
     if (p5 === 0 && pp5 === 0){
 
@@ -620,6 +624,7 @@ let stopTheGame = ()=>{
         newText.style.color = winColor
         newText.innerText = winner + " wins!"
         document.getElementById("text-container").appendChild(newText)
+        document.getElementById("container").scrollIntoView(false);
     }
     if (p6 === 0 && pp6 === 0){
 
@@ -633,7 +638,7 @@ let stopTheGame = ()=>{
         newText.style.color = winColor
         newText.innerText = winner + " wins!"
         document.getElementById("text-container").appendChild(newText)
-        newText.style.fontSize= "50px"
+        document.getElementById("container").scrollIntoView(false);
     }
     if (p7 === 0 && pp7 === 0){
 
@@ -647,6 +652,7 @@ let stopTheGame = ()=>{
         newText.style.color = winColor
         newText.innerText = winner + " wins!"
         document.getElementById("text-container").appendChild(newText)
+        document.getElementById("container").scrollIntoView(false);
     }
     if (p8 === 0 && pp8 === 0){
 
@@ -660,6 +666,7 @@ let stopTheGame = ()=>{
         newText.style.color = winColor
         newText.innerText = winner + " wins!"
         document.getElementById("text-container").appendChild(newText)
+        document.getElementById("container").scrollIntoView(false);
     }
     if (p9 === 0 && pp9 === 0){
 
@@ -673,6 +680,8 @@ let stopTheGame = ()=>{
         newText.style.color = winColor
         newText.innerText = winner + " wins!"
         document.getElementById("text-container").appendChild(newText)
+        window.scrollTo(0,document.body.scrollHeight)
+        document.getElementById("container").scrollIntoView(false);
     }
 
     
@@ -696,6 +705,7 @@ let tieGame = () => {
                                         let btn = document.createElement("button")
                                             btn.innerText = "PLAY AGAIN"
                                             container.appendChild(btn)
+                                            document.getElementById("container").scrollIntoView(false);
                                             btn.addEventListener("click", function(){
                                                 console.log("hello")
                                                 location.reload(true)
