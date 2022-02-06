@@ -111,7 +111,7 @@ let positionOne = document.getElementById("pos1").addEventListener("click", func
             document.getElementById("text1").appendChild(soma1);
             i++
             p1++
-
+            
         } else {
             document.getElementById("whosTurn").innerText = "Your move Soma!";
             document.getElementById("text1").appendChild(henri1);
@@ -126,7 +126,6 @@ let positionOne = document.getElementById("pos1").addEventListener("click", func
         btn.innerText = "PLAY AGAIN"
         container.appendChild(btn)
         btn.addEventListener("click", function(){
-            console.log("hello")
             location.reload(true)
         })
         winner = "Soma"
@@ -139,7 +138,6 @@ let positionOne = document.getElementById("pos1").addEventListener("click", func
         btn.innerText = "PLAY AGAIN"
         container.appendChild(btn)
         btn.addEventListener("click", function(){
-            console.log("hello")
             location.reload(true)
         })    
         winner = "Henri"
@@ -152,20 +150,19 @@ let positionOne = document.getElementById("pos1").addEventListener("click", func
 
 
 let positionTwo = document.getElementById("pos2").addEventListener("click", function(){
- 
     if (p2 === 0 && pp2 === 0){
         if (i%2 == 0){
             i++
             p2++
             document.getElementById("whosTurn").innerText = "Your move Henri!";
             document.getElementById("text2").appendChild(soma2);
-
+            
         } else {
             i++
             pp2++
             document.getElementById("whosTurn").innerText = "Your move Soma!";
             document.getElementById("text2").appendChild(henri2);
-
+            
         } 
     }
     if (p2 === 1 && p1 === 1 & p3 === 1 || p2 === 1 && p5 === 1 && p8 === 1){
@@ -174,88 +171,82 @@ let positionTwo = document.getElementById("pos2").addEventListener("click", func
         btn.innerText = "PLAY AGAIN"
         container.appendChild(btn)
         btn.addEventListener("click", function(){
-            console.log("hello")
             location.reload(true)
         })
         winner = "Soma"
         checkForSpinner();
         stopTheGame();
-
-        }else if (pp2 === 1 && pp1 === 1 & pp3 === 1 || pp2 === 1 && pp5 === 1 && pp8 === 1){
-            document.getElementById("whosTurn").innerText = "Henri Wins!"
-            let btn = document.createElement("button")
-            btn.innerText = "PLAY AGAIN"
-            container.appendChild(btn)
-            btn.addEventListener("click", function(){
-                console.log("hello")
-                location.reload(true)
-            })    
-            winner = "Henri"
-            checkForSpinner();
-            stopTheGame();
-            
-    }
-    tieGame();
-})
-
-let positionThree = document.getElementById("pos3").addEventListener("click", function(){
-    
-    if (p3 === 0 && pp3 === 0){
-        if (i%2 == 0){
-            document.getElementById("whosTurn").innerText = "Your move Henri!";
-            document.getElementById("text3").appendChild(soma3);
-            i++
-            p3++
-        } else {
-            document.getElementById("whosTurn").innerText = "Your move Soma!";
-            document.getElementById("text3").appendChild(henri3)
-            i++
-            pp3++
-        } 
-    }
-    if (p3 === 1 && p1 === 1 & p2 === 1 || p3 === 1 && p6 === 1 && p9 === 1 || p3 === 1 && p5 === 1 && p7 === 1){
-        document.getElementById("whosTurn").innerText = "Soma Wins!"
+        
+    }else if (pp2 === 1 && pp1 === 1 & pp3 === 1 || pp2 === 1 && pp5 === 1 && pp8 === 1){
+        document.getElementById("whosTurn").innerText = "Henri Wins!"
         let btn = document.createElement("button")
         btn.innerText = "PLAY AGAIN"
         container.appendChild(btn)
         btn.addEventListener("click", function(){
-            console.log("hello")
+            location.reload(true)
+        })    
+        winner = "Henri"
+        checkForSpinner();
+        stopTheGame();
+        
+    }
+    tieGame();
+    })
+    
+    let positionThree = document.getElementById("pos3").addEventListener("click", function(){
+        if (p3 === 0 && pp3 === 0){
+            if (i%2 == 0){
+                document.getElementById("whosTurn").innerText = "Your move Henri!";
+                document.getElementById("text3").appendChild(soma3);
+                i++
+                p3++
+            } else {
+                document.getElementById("whosTurn").innerText = "Your move Soma!";
+                document.getElementById("text3").appendChild(henri3)
+                i++
+                pp3++
+            } 
+        }
+        if (p3 === 1 && p1 === 1 & p2 === 1 || p3 === 1 && p6 === 1 && p9 === 1 || p3 === 1 && p5 === 1 && p7 === 1){
+            document.getElementById("whosTurn").innerText = "Soma Wins!"
+        let btn = document.createElement("button")
+        btn.innerText = "PLAY AGAIN"
+        container.appendChild(btn)
+        btn.addEventListener("click", function(){
             location.reload(true)
         })
         winner = "Soma"
         checkForSpinner();
         stopTheGame();
-
-        }else if (pp3 === 1 && pp1 === 1 & pp2 === 1 || pp3 === 1 && pp6 === 1 && pp9 === 1 || pp3 === 1 && pp5 === 1 && pp7 === 1){
-            document.getElementById("whosTurn").innerText = "Henri Wins!"
-            let btn = document.createElement("button")
-            btn.innerText = "PLAY AGAIN"
-            container.appendChild(btn)
-            btn.addEventListener("click", function(){
-                console.log("hello")
-                location.reload(true)
-            })    
-            winner = "Henri"
-            checkForSpinner();
-            stopTheGame();
+        
+    }else if (pp3 === 1 && pp1 === 1 & pp2 === 1 || pp3 === 1 && pp6 === 1 && pp9 === 1 || pp3 === 1 && pp5 === 1 && pp7 === 1){
+        document.getElementById("whosTurn").innerText = "Henri Wins!"
+        let btn = document.createElement("button")
+        btn.innerText = "PLAY AGAIN"
+        container.appendChild(btn)
+        btn.addEventListener("click", function(){
+            location.reload(true)
+        })    
+        winner = "Henri"
+        checkForSpinner();
+        stopTheGame();
     }
     tieGame();
-})
-
-let positionFour = document.getElementById("pos4").addEventListener("click", function(){
+    })
     
-    if (p4 === 0 && pp4 === 0){
-        if (i%2 == 0){
-            document.getElementById("whosTurn").innerText = "Your move Henri!";
-            document.getElementById("text4").appendChild(soma4);
-            i++
-            p4++
-        } else {
-            document.getElementById("whosTurn").innerText = "Your move Soma!";
-            document.getElementById("text4").appendChild(henri4)
-            i++
-            pp4++
-        } 
+    let positionFour = document.getElementById("pos4").addEventListener("click", function(){
+        if (p4 === 0 && pp4 === 0){
+            if (i%2 == 0){
+                document.getElementById("whosTurn").innerText = "Your move Henri!";
+                document.getElementById("text4").appendChild(soma4);
+                i++
+                p4++
+            } else {
+                document.getElementById("whosTurn").innerText = "Your move Soma!";
+                document.getElementById("text4").appendChild(henri4)
+                i++
+                pp4++
+            } 
     }
     if (p4 === 1 && p1 === 1 & p7 === 1 || p4 === 1 && p5 === 1 && p6 === 1){
         document.getElementById("whosTurn").innerText = "Soma Wins!"
@@ -263,31 +254,28 @@ let positionFour = document.getElementById("pos4").addEventListener("click", fun
         btn.innerText = "PLAY AGAIN"
         container.appendChild(btn)
         btn.addEventListener("click", function(){
-            console.log("hello")
             location.reload(true)
         })
         winner = "Soma"
         checkForSpinner();
         stopTheGame();
-
-        }else if (pp4 === 1 && pp1 === 1 & pp7 === 1 || pp4 === 1 && pp5 === 1 && pp6 === 1){
-            document.getElementById("whosTurn").innerText = "Henri Wins!"
-            let btn = document.createElement("button")
-            btn.innerText = "PLAY AGAIN"
-            container.appendChild(btn)
-            btn.addEventListener("click", function(){
-                console.log("hello")
-                location.reload(true)
-            })    
-            winner = "Henri"
-            checkForSpinner();
-            stopTheGame();
+        
+    }else if (pp4 === 1 && pp1 === 1 & pp7 === 1 || pp4 === 1 && pp5 === 1 && pp6 === 1){
+        document.getElementById("whosTurn").innerText = "Henri Wins!"
+        let btn = document.createElement("button")
+        btn.innerText = "PLAY AGAIN"
+        container.appendChild(btn)
+        btn.addEventListener("click", function(){
+            location.reload(true)
+        })    
+        winner = "Henri"
+        checkForSpinner();
+        stopTheGame();
     }
     tieGame();
 })
 
 let positionFive = document.getElementById("pos5").addEventListener("click", function(){
-
     if (p5 === 0 && pp5 === 0){
         if (i%2 == 0){
             document.getElementById("whosTurn").innerText = "Your move Henri!";
@@ -307,25 +295,23 @@ let positionFive = document.getElementById("pos5").addEventListener("click", fun
         btn.innerText = "PLAY AGAIN"
         container.appendChild(btn)
         btn.addEventListener("click", function(){
-            console.log("hello")
             location.reload(true)
         })
         winner = "Soma"
         checkForSpinner();
         stopTheGame();
-
-        }else if (pp5 === 1 && pp2 === 1 & pp8 === 1 || pp5 === 1 && pp4 === 1 && pp6 === 1 || pp5 === 1 && pp1 === 1 && pp9 === 1 || pp5 === 1 && pp3 === 1 && pp7 === 1 ){
-            document.getElementById("whosTurn").innerText = "Henri Wins!"
-            let btn = document.createElement("button")
-            btn.innerText = "PLAY AGAIN"
-            container.appendChild(btn)
-            btn.addEventListener("click", function(){
-                console.log("hello")
-                location.reload(true)
-            })
-            winner = "Henri"
-            checkForSpinner();
-            stopTheGame();
+        
+    }else if (pp5 === 1 && pp2 === 1 & pp8 === 1 || pp5 === 1 && pp4 === 1 && pp6 === 1 || pp5 === 1 && pp1 === 1 && pp9 === 1 || pp5 === 1 && pp3 === 1 && pp7 === 1 ){
+        document.getElementById("whosTurn").innerText = "Henri Wins!"
+        let btn = document.createElement("button")
+        btn.innerText = "PLAY AGAIN"
+        container.appendChild(btn)
+        btn.addEventListener("click", function(){
+            location.reload(true)
+        })
+        winner = "Henri"
+        checkForSpinner();
+        stopTheGame();
     }
     tieGame();
 })
@@ -351,24 +337,22 @@ let positionSix = document.getElementById("pos6").addEventListener("click", func
         btn.innerText = "PLAY AGAIN"
         container.appendChild(btn)
         btn.addEventListener("click", function(){
-            console.log("hello")
             location.reload(true)
         })
         winner = "Soma"
         checkForSpinner();
         stopTheGame();
-        }else if (pp6 === 1 && pp5 === 1 & pp4 === 1 || pp6 === 1 && pp3 === 1 && pp9 === 1){
-            document.getElementById("whosTurn").innerText = "Henri Wins!"
-            let btn = document.createElement("button")
-            btn.innerText = "PLAY AGAIN"
-            container.appendChild(btn)
-            btn.addEventListener("click", function(){
-                console.log("hello")
-                location.reload(true)
-            })    
-            winner = "Henri"
-            checkForSpinner();
-            stopTheGame();
+    }else if (pp6 === 1 && pp5 === 1 & pp4 === 1 || pp6 === 1 && pp3 === 1 && pp9 === 1){
+        document.getElementById("whosTurn").innerText = "Henri Wins!"
+        let btn = document.createElement("button")
+        btn.innerText = "PLAY AGAIN"
+        container.appendChild(btn)
+        btn.addEventListener("click", function(){
+            location.reload(true)
+        })    
+        winner = "Henri"
+        checkForSpinner();
+        stopTheGame();
     }
     tieGame();
 })
@@ -394,31 +378,33 @@ let positionSeven = document.getElementById("pos7").addEventListener("click", fu
         btn.innerText = "PLAY AGAIN"
         container.appendChild(btn)
         btn.addEventListener("click", function(){
-            console.log("hello")
             location.reload(true)
         })
+        p7++
+        console.log(pp7)
         winner = "Soma"
         checkForSpinner();
         stopTheGame();
-
-        }else if (pp7 === 1 && pp4 === 1 & pp1 === 1 || pp7 === 1 && pp8 === 1 && pp9 === 1 || pp7 === 1 && pp5 === 1 && pp3 === 1){
-            document.getElementById("whosTurn").innerText = "Henri Wins!"
-            let btn = document.createElement("button")
-            btn.innerText = "PLAY AGAIN"
-            container.appendChild(btn)
-            btn.addEventListener("click", function(){
-                console.log("hello")
-                location.reload(true)
-            })  
-            winner = "Henri"
-            checkForSpinner();
-            stopTheGame();
+        
+    }else if (pp7 === 1 && pp4 === 1 & pp1 === 1 || pp7 === 1 && pp8 === 1 && pp9 === 1 || pp7 === 1 && pp5 === 1 && pp3 === 1){
+        document.getElementById("whosTurn").innerText = "Henri Wins!"
+        let btn = document.createElement("button")
+        btn.innerText = "PLAY AGAIN"
+        container.appendChild(btn)
+        btn.addEventListener("click", function(){
+            location.reload(true)
+        })  
+        pp7++
+        console.log(pp7)
+        winner = "Henri"
+        checkForSpinner();
+        stopTheGame();
     }
     tieGame();
 })
 
 let positionEight = document.getElementById("pos8").addEventListener("click", function(){
-   
+    
     if (p8 === 0 && pp8 === 0){
         if (i%2 == 0){
             document.getElementById("whosTurn").innerText = "Your move Henri!";
@@ -438,26 +424,24 @@ let positionEight = document.getElementById("pos8").addEventListener("click", fu
         btn.innerText = "PLAY AGAIN"
         container.appendChild(btn)
         btn.addEventListener("click", function(){
-            console.log("hello")
             location.reload(true)
         })
         winner = "Soma"
         checkForSpinner();
         stopTheGame();
-
-
-        }else if (pp8 === 1 && pp7 === 1 & pp9 === 1 || pp8 === 1 && pp5 === 1 && pp2 === 1){
-            document.getElementById("whosTurn").innerText = "Henri Wins!"
-            let btn = document.createElement("button")
-            btn.innerText = "PLAY AGAIN"
-            container.appendChild(btn)
-            btn.addEventListener("click", function(){
-                console.log("hello")
-                location.reload(true)
-            })    
-            winner = "Henri"
-            checkForSpinner();
-            stopTheGame();
+        
+        
+    }else if (pp8 === 1 && pp7 === 1 & pp9 === 1 || pp8 === 1 && pp5 === 1 && pp2 === 1){
+        document.getElementById("whosTurn").innerText = "Henri Wins!"
+        let btn = document.createElement("button")
+        btn.innerText = "PLAY AGAIN"
+        container.appendChild(btn)
+        btn.addEventListener("click", function(){
+            location.reload(true)
+        })    
+        winner = "Henri"
+        checkForSpinner();
+        stopTheGame();
     }
     tieGame();
 })
@@ -483,27 +467,25 @@ let positionNine = document.getElementById("pos9").addEventListener("click", fun
         btn.innerText = "PLAY AGAIN"
         container.appendChild(btn)
         btn.addEventListener("click", function(){
-            console.log("hello")
             location.reload(true)
         })
         winner = "Soma"
         checkForSpinner();
         stopTheGame();
-
-
-
-        }else if (pp9 === 1 && pp8 === 1 & pp7 === 1 || pp9 === 1 && pp6 === 1 && pp3 === 1 || pp9 === 1 && pp5 === 1 && pp1 === 1){
-            document.getElementById("whosTurn").innerText = "Henri Wins!"
-            let btn = document.createElement("button")
-            btn.innerText = "PLAY AGAIN"
-            container.appendChild(btn)
-            btn.addEventListener("click", function(){
-                console.log("hello")
-                location.reload(true)
-            })    
-            winner = "Henri"
-            checkForSpinner();
-            stopTheGame();
+        
+        
+        
+    }else if (pp9 === 1 && pp8 === 1 & pp7 === 1 || pp9 === 1 && pp6 === 1 && pp3 === 1 || pp9 === 1 && pp5 === 1 && pp1 === 1){
+        document.getElementById("whosTurn").innerText = "Henri Wins!"
+        let btn = document.createElement("button")
+        btn.innerText = "PLAY AGAIN"
+        container.appendChild(btn)
+        btn.addEventListener("click", function(){
+            location.reload(true)
+        })    
+        winner = "Henri"
+        checkForSpinner();
+        stopTheGame();
     }
     tieGame();
 })
@@ -689,6 +671,7 @@ let stopTheGame = ()=>{
 }
 
 // CATS GAME --------------------------------------------------->
+let noRepeat = 0
 let tieGame = () => {
 
 
@@ -701,15 +684,18 @@ let tieGame = () => {
                             if (p7 === 1 || pp7 ===1){
                                 if (p8 === 1 || pp8 === 1){
                                     if (p9 === 1 || pp9 === 1){
-                                        document.getElementById("whosTurn").innerText = "it's a tie!"
+                                        if (noRepeat === 0){
+                                            noRepeat++
+                                            console.log(noRepeat)
+                                            document.getElementById("whosTurn").innerText = "it's a tie!"
                                         let btn = document.createElement("button")
+                                        console.log(noRepeat)
                                             btn.innerText = "PLAY AGAIN"
                                             container.appendChild(btn)
                                             document.getElementById("container").scrollIntoView(false);
                                             btn.addEventListener("click", function(){
-                                                console.log("hello")
                                                 location.reload(true)
-                                            })    
+                                        })    
 
                                     }
                                 }
@@ -720,4 +706,5 @@ let tieGame = () => {
             }
         }
     }
+}
 }
