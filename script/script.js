@@ -124,7 +124,7 @@ let positionOne = document.getElementById("pos1").addEventListener("click", func
     if (p1 === 1 && p2 === 1 & p3 === 1 || p1 === 1 && p4 === 1 && p7 === 1 || p1 === 1 && p5 === 1 & p9 === 1){
         document.getElementById("whosTurn").innerText = "Soma Wins!"
         let btn = document.createElement("button")
-        btn.innerText = "play again"
+        btn.innerText = "PLAY AGAIN"
         container.appendChild(btn)
         btn.addEventListener("click", function(){
             console.log("hello")
@@ -137,7 +137,7 @@ let positionOne = document.getElementById("pos1").addEventListener("click", func
         }else if (pp1 === 1 && pp2 === 1 & pp3 === 1 || pp1 === 1 && pp4 === 1 && pp7 === 1 || pp1 === 1 && pp5 === 1 & pp9 === 1){
             document.getElementById("whosTurn").innerText = "Henri Wins!"
             let btn = document.createElement("button")
-            btn.innerText = "play again"
+            btn.innerText = "PLAY AGAIN"
             container.appendChild(btn)
             btn.addEventListener("click", function(){
                 console.log("hello")
@@ -171,7 +171,7 @@ let positionTwo = document.getElementById("pos2").addEventListener("click", func
     if (p2 === 1 && p1 === 1 & p3 === 1 || p2 === 1 && p5 === 1 && p8 === 1){
         document.getElementById("whosTurn").innerText = "Soma Wins!"
         let btn = document.createElement("button")
-        btn.innerText = "play again"
+        btn.innerText = "PLAY AGAIN"
         container.appendChild(btn)
         btn.addEventListener("click", function(){
             console.log("hello")
@@ -184,7 +184,7 @@ let positionTwo = document.getElementById("pos2").addEventListener("click", func
         }else if (pp2 === 1 && pp1 === 1 & pp3 === 1 || pp2 === 1 && pp5 === 1 && pp8 === 1){
             document.getElementById("whosTurn").innerText = "Henri Wins!"
             let btn = document.createElement("button")
-            btn.innerText = "play again"
+            btn.innerText = "PLAY AGAIN"
             container.appendChild(btn)
             btn.addEventListener("click", function(){
                 console.log("hello")
@@ -260,7 +260,7 @@ let positionFour = document.getElementById("pos4").addEventListener("click", fun
     if (p4 === 1 && p1 === 1 & p7 === 1 || p4 === 1 && p5 === 1 && p6 === 1){
         document.getElementById("whosTurn").innerText = "Soma Wins!"
         let btn = document.createElement("button")
-        btn.innerText = "play again"
+        btn.innerText = "PLAY AGAIN"
         container.appendChild(btn)
         btn.addEventListener("click", function(){
             console.log("hello")

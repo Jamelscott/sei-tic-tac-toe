@@ -37,6 +37,12 @@ h1{
     font-size: 50px;
 }
 
+.first-container {
+    margin-top: 2em;
+    width: 800px;
+    text-align: center;
+}
+
 .container {
     margin-top: 2em;
     width: 800px;
@@ -84,4 +90,35 @@ button {
     height: 100px;
     background-color: rgb(207, 123, 123);
     font-size: 30px;
+}
+
+
+@media (max-width:850px) {
+
+    *{
+        background-color: rgb(115, 115, 179);
+    }
+
+    .positions{
+        height: 150px;
+        width: 150px;
+    }
+
+    .container {
+        margin-top: 2em;
+        width: 550px;
+        text-align: center;
+        margin-bottom: 2em;
+    }
+
+    .first-container {
+        margin-top: 2em;
+        width: 550px;
+        text-align: center;
+        margin-bottom: 2em;
+    }
+    img {
+        height: 100px;
+        width: 100px
+    }
 }
