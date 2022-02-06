@@ -554,6 +554,7 @@ if (winner.length === 4){
 
 let stopTheGame = ()=>{
 
+    let winColor = "rgb(205, 211, 247)"
     if (p1 === 0 && pp1 === 0){
 
         let random = document.getElementById("text1")
@@ -563,7 +564,7 @@ let stopTheGame = ()=>{
 
         let newText = document.createElement("p")
         newText.style.fontSize= "50px"
-        newText.style.color= "green"
+        newText.style.color= winColor
         newText.innerText = winner + " wins!"
         document.getElementById("text-container").appendChild(newText)
 
@@ -577,7 +578,7 @@ let stopTheGame = ()=>{
 
         let newText = document.createElement("p")
         newText.style.fontSize= "50px"
-        newText.style.color = "green"
+        newText.style.color = winColor
         newText.innerText = winner + " wins!"
         document.getElementById("text-container").appendChild(newText)
     }
@@ -590,7 +591,7 @@ let stopTheGame = ()=>{
 
         let newText = document.createElement("p")
         newText.style.fontSize= "50px"
-        newText.style.color = "green"
+        newText.style.color = winColor
         newText.innerText = winner + " wins!"
         document.getElementById("text-container").appendChild(newText)
     }
@@ -603,7 +604,7 @@ let stopTheGame = ()=>{
 
         let newText = document.createElement("p")
         newText.style.fontSize= "50px"
-        newText.style.color = "green"
+        newText.style.color = winColor
         newText.innerText = winner + " wins!"
         document.getElementById("text-container").appendChild(newText)
     }
@@ -616,7 +617,7 @@ let stopTheGame = ()=>{
 
         let newText = document.createElement("p")
         newText.style.fontSize= "50px"
-        newText.style.color = "green"
+        newText.style.color = winColor
         newText.innerText = winner + " wins!"
         document.getElementById("text-container").appendChild(newText)
     }
@@ -629,7 +630,7 @@ let stopTheGame = ()=>{
 
         let newText = document.createElement("p")
         newText.style.fontSize= "50px"
-        newText.style.color = "green"
+        newText.style.color = winColor
         newText.innerText = winner + " wins!"
         document.getElementById("text-container").appendChild(newText)
         newText.style.fontSize= "50px"
@@ -643,7 +644,7 @@ let stopTheGame = ()=>{
 
         let newText = document.createElement("p")
         newText.style.fontSize= "50px"
-        newText.style.color = "green"
+        newText.style.color = winColor
         newText.innerText = winner + " wins!"
         document.getElementById("text-container").appendChild(newText)
     }
@@ -656,7 +657,7 @@ let stopTheGame = ()=>{
 
         let newText = document.createElement("p")
         newText.style.fontSize= "50px"
-        newText.style.color = "green"
+        newText.style.color = winColor
         newText.innerText = winner + " wins!"
         document.getElementById("text-container").appendChild(newText)
     }
@@ -669,7 +670,7 @@ let stopTheGame = ()=>{
 
         let newText = document.createElement("p")
         newText.style.fontSize= "50px"
-        newText.style.color = "green"
+        newText.style.color = winColor
         newText.innerText = winner + " wins!"
         document.getElementById("text-container").appendChild(newText)
     }
